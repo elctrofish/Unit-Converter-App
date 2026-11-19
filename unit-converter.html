@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple, easy-to-use unit converter.">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="unit-converter.css">
+    <script src="unit-converter.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Unit Converter home">
+        <span class="brand-mark" aria-hidden="true">↔</span>
+        <span>Convert<span class="brand-accent">ly</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#converter">Converter</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Quick, clear, accurate</p>
+        <h1 id="page-title">Unit Converter</h1>
+        <p>Convert everyday measurements in just a few clicks.</p>
+      </section>
+
+      <section class="converter-card" id="converter" aria-labelledby="converter-title">
+        <div class="card-heading">
+          <div>
+            <p class="eyebrow">Your conversion</p>
+            <h2 id="converter-title">Make a conversion</h2>
+          </div>
+          <span class="card-icon" aria-hidden="true">⇄</span>
+        </div>
+
+        <div class="field category-field">
+          <label for="category">Measurement</label>
+          <select id="category" name="category">
+            <option value="length">Length</option>
+            <option value="mass">Mass</option>
+            <option value="temperature">Temperature</option>
+            <option value="volume">Volume</option>
+          </select>
+        </div>
+
+        <div class="conversion-fields">
+          <div class="field">
+            <label for="amount">Amount</label>
+            <input id="amount" name="amount" type="number" value="1" step="any" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="from-unit">From</label>
+            <select id="from-unit" name="from-unit"></select>
+          </div>
+          <button class="swap-button" id="swap" type="button" aria-label="Swap units" title="Swap units">
+            <span aria-hidden="true">⇄</span>
+          </button>
+          <div class="field">
+            <label for="to-unit">To</label>
+            <select id="to-unit" name="to-unit"></select>
+          </div>
+        </div>
+
+        <div class="result" aria-live="polite" aria-atomic="true">
+          <p class="result-label">Result</p>
+          <output id="result" for="amount from-unit to-unit">100 cm = 1 m</output>
+        </div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <h2 id="about-title">Simple conversions, made easy</h2>
+        <p>Choose a measurement, enter a value, and get an instant result. Switch between length, mass, temperature, and volume whenever you need.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Convertly</span>
+      <span>Everyday conversions, all in one place.</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </body>
+</html>
