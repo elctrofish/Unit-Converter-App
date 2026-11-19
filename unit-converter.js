@@ -34,6 +34,18 @@ const unitSets = {
     { id: "mph", label: "Miles per hour (mph)", symbol: "mph", factor: 0.44704 },
     { id: "fts", label: "Feet per second (ft/s)", symbol: "ft/s", factor: 0.3048 },
     { id: "kn", label: "Knots (kn)", symbol: "kn", factor: 1852 / 3600 }
+  ],
+  area: [
+    { id: "mm2", label: "Square millimeters (mm²)", symbol: "mm²", factor: 0.000001 },
+    { id: "cm2", label: "Square centimeters (cm²)", symbol: "cm²", factor: 0.0001 },
+    { id: "m2", label: "Square meters (m²)", symbol: "m²", factor: 1 },
+    { id: "km2", label: "Square kilometers (km²)", symbol: "km²", factor: 1000000 },
+    { id: "in2", label: "Square inches (in²)", symbol: "in²", factor: 0.00064516 },
+    { id: "ft2", label: "Square feet (ft²)", symbol: "ft²", factor: 0.09290304 },
+    { id: "yd2", label: "Square yards (yd²)", symbol: "yd²", factor: 0.83612736 },
+    { id: "acre", label: "Acres (ac)", symbol: "ac", factor: 4046.8564224 },
+    { id: "ha", label: "Hectares (ha)", symbol: "ha", factor: 10000 },
+    { id: "mi2", label: "Square miles (mi²)", symbol: "mi²", factor: 2589988.110336 }
   ]
 };
 
@@ -109,7 +121,8 @@ categorySelect.addEventListener("change", () => {
     mass: ["kg", "lb"],
     temperature: ["c", "f"],
     volume: ["l", "ml"],
-    speed: ["kmh", "mph"]
+    speed: ["kmh", "mph"],
+    area: ["m2", "ft2"]
   };
   populateUnits(categorySelect.value, ...defaults[categorySelect.value]);
   updateResult();
