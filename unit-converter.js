@@ -46,6 +46,16 @@ const unitSets = {
     { id: "acre", label: "Acres (ac)", symbol: "ac", factor: 4046.8564224 },
     { id: "ha", label: "Hectares (ha)", symbol: "ha", factor: 10000 },
     { id: "mi2", label: "Square miles (mi²)", symbol: "mi²", factor: 2589988.110336 }
+  ],
+  pressure: [
+    { id: "pa", label: "Pascals (Pa)", symbol: "Pa", factor: 1 },
+    { id: "kpa", label: "Kilopascals (kPa)", symbol: "kPa", factor: 1000 },
+    { id: "mpa", label: "Megapascals (MPa)", symbol: "MPa", factor: 1000000 },
+    { id: "bar", label: "Bars (bar)", symbol: "bar", factor: 100000 },
+    { id: "atm", label: "Atmospheres (atm)", symbol: "atm", factor: 101325 },
+    { id: "psi", label: "Pounds per square inch (psi)", symbol: "psi", factor: 6894.757293168 },
+    { id: "mmhg", label: "Millimeters of mercury (mmHg)", symbol: "mmHg", factor: 133.322387415 },
+    { id: "hpa", label: "Hectopascals (hPa)", symbol: "hPa", factor: 100 }
   ]
 };
 
@@ -122,7 +132,8 @@ categorySelect.addEventListener("change", () => {
     temperature: ["c", "f"],
     volume: ["l", "ml"],
     speed: ["kmh", "mph"],
-    area: ["m2", "ft2"]
+    area: ["m2", "ft2"],
+    pressure: ["bar", "psi"]
   };
   populateUnits(categorySelect.value, ...defaults[categorySelect.value]);
   updateResult();
