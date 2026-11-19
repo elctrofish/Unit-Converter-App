@@ -28,6 +28,13 @@ const unitSets = {
     { id: "cup", label: "Cups (US)", symbol: "cup", factor: 0.2365882365 },
     { id: "gal", label: "Gallons (US)", symbol: "gal", factor: 3.785411784 }
   ],
+  speed: [
+    { id: "ms", label: "Meters per second (m/s)", symbol: "m/s", factor: 1 },
+    { id: "kmh", label: "Kilometers per hour (km/h)", symbol: "km/h", factor: 1 / 3.6 },
+    { id: "mph", label: "Miles per hour (mph)", symbol: "mph", factor: 0.44704 },
+    { id: "fts", label: "Feet per second (ft/s)", symbol: "ft/s", factor: 0.3048 },
+    { id: "kn", label: "Knots (kn)", symbol: "kn", factor: 1852 / 3600 }
+  ],
   area: [
     { id: "mm2", label: "Square millimeters (mm²)", symbol: "mm²", factor: 0.000001 },
     { id: "cm2", label: "Square centimeters (cm²)", symbol: "cm²", factor: 0.0001 },
@@ -124,6 +131,7 @@ categorySelect.addEventListener("change", () => {
     mass: ["kg", "lb"],
     temperature: ["c", "f"],
     volume: ["l", "ml"],
+    speed: ["kmh", "mph"],
     area: ["m2", "ft2"],
     pressure: ["bar", "psi"]
   };
