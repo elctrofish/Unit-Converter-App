@@ -27,6 +27,13 @@ const unitSets = {
     { id: "tbsp", label: "Tablespoons (US)", symbol: "tbsp", factor: 0.01478676478125 },
     { id: "cup", label: "Cups (US)", symbol: "cup", factor: 0.2365882365 },
     { id: "gal", label: "Gallons (US)", symbol: "gal", factor: 3.785411784 }
+  ],
+  speed: [
+    { id: "ms", label: "Meters per second (m/s)", symbol: "m/s", factor: 1 },
+    { id: "kmh", label: "Kilometers per hour (km/h)", symbol: "km/h", factor: 1 / 3.6 },
+    { id: "mph", label: "Miles per hour (mph)", symbol: "mph", factor: 0.44704 },
+    { id: "fts", label: "Feet per second (ft/s)", symbol: "ft/s", factor: 0.3048 },
+    { id: "kn", label: "Knots (kn)", symbol: "kn", factor: 1852 / 3600 }
   ]
 };
 
@@ -101,7 +108,8 @@ categorySelect.addEventListener("change", () => {
     length: ["cm", "m"],
     mass: ["kg", "lb"],
     temperature: ["c", "f"],
-    volume: ["l", "ml"]
+    volume: ["l", "ml"],
+    speed: ["kmh", "mph"]
   };
   populateUnits(categorySelect.value, ...defaults[categorySelect.value]);
   updateResult();
